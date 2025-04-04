@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.logo-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-500 to-blue-600;
+  background-size: 200% auto;
+  animation: gradient 3s ease infinite;
+}
+
+.logo-hover {
+  @apply transition-transform duration-300 hover:scale-105;
+}
